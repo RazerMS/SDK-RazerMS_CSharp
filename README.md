@@ -18,7 +18,7 @@ Create MOLPayVB object in order to access the properties of Base:
 ```CSharp
 MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
-Set the values received from MOLPay's payment page 
+Set the values received from MOLPay's payment response
 ```CSharp
 object.Vkey = "xxxxxxx"   'Replace ​xxxxxxxxxx with your MOLPay Secret_Key
 object.TranID = String.Format("{0}", Request.Form["tranID"]);
