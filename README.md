@@ -34,8 +34,12 @@ object.Bill_desc = "This is used for initiation of payment request";
 object._Currency = "1";
 object.Country = "MY";
 object.Returnurl = "http://localhost:52815/molpay.aspx"; //localhost url for example
-object._Type = "sandbox";
 ```
+Set which type of enviroment with either **Sandbox** or **Production**
+```CSharp
+object._Type = "sandbox" ' "sandbox" or "production"
+```
+
 Use `object.Pay();` to trigger POST data function
 
 -------
