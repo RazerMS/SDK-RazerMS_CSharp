@@ -12,7 +12,9 @@ Version 1.0.0
 2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
+-------
 ### For initiation of payment request
+
 Add `using MolPayCS;` 
 
 Create MOLPayCS object in order to access the properties of Base: 
@@ -35,6 +37,8 @@ object.Returnurl = "http://localhost:52815/molpay.aspx"; //localhost url for exa
 object._Type = "sandbox";
 ```
 Use `object.Pay();` to trigger POST data function
+
+-------
 
 ### Usage
 Add `using MolPayCS;` 
