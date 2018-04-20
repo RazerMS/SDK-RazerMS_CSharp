@@ -24,7 +24,7 @@ MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
 Set the values to Post data for MOLPay's payment request
 ```CSharp
-object.Verifykey = "xxxxxxx"   //Replace ​xxxxxxxxxx with your MOLPay Verify Key
+object.Verifykey = "xxxxxxx";   //Replace ​xxxxxxxxxx with your MOLPay Verify Key
 object._MerchantID = "XXXXXXX";   //Replace ​XXXXXX with your MOLPay Merchant ID
 object._Amount = "100";
 object._Orderid = "66";
