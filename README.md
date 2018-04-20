@@ -11,18 +11,34 @@ Version 1.0.0
 1. Download `MOLPay.dll` library.
 2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
-4. Add `using MolPayCS;` 
 
-### Quick Demo
+### For initiation of payment request
+Add `using MolPayCS;` 
+
 Create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
 MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
-Use fucntion `obj.QuickDemo();` to have a quick demo;
-
+Set the values to Post data for MOLPay's payment request
+```CSharp
+object._MerchantID = "SB_supportmolpay";
+object.Verifykey = "960f54ac03b2e0e7b36aed4d4e46ac9e";
+object._Amount = "100";
+object._Orderid = "66";
+object.Bill_name = "MOLPay Test";
+object.Bill_email = "demo@molpay.com";
+object.Bill_desc = "This is used for initiation of payment request";
+object._Currency = "1";
+object.Country = "MY";
+object.Returnurl = "http://localhost:52815/molpay.aspx"; //localhost url for example
+object._Type = "sandbox";
+```
+Use `object.Pay();` to trigger POST data function
 
 ### Usage
+Add `using MolPayCS;` 
+
 Create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
