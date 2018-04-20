@@ -24,12 +24,12 @@ MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
 Set the values to Post data for MOLPay's payment request
 ```CSharp
-object._MerchantID = "SB_supportmolpay";
-object.Verifykey = "960f54ac03b2e0e7b36aed4d4e46ac9e";
+object.Verifykey = "xxxxxxx"   //Replace ​xxxxxxxxxx with your MOLPay Verify Key
+object._MerchantID = "XXXXXXX";   //Replace ​XXXXXX with your MOLPay Merchant ID
 object._Amount = "100";
 object._Orderid = "66";
 object.Bill_name = "MOLPay Test";
-object.Bill_email = "demo@molpay.com";
+object.Bill_email = "example@gmail.com";
 object.Bill_desc = "This is used for initiation of payment request";
 object._Currency = "1";
 object.Country = "MY";
@@ -50,7 +50,7 @@ MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
 Set the values received from MOLPay's payment response
 ```CSharp
-object.Vkey = "xxxxxxx"   'Replace ​xxxxxxxxxx with your MOLPay Secret_Key
+object.Vkey = "xxxxxxx"   //Replace ​xxxxxxxxxx with your MOLPay Secret_Key
 object.TranID = String.Format("{0}", Request.Form["tranID"]);
 object.Orderid = String.Format("{0}", Request.Form["orderid"]);
 object.Status = String.Format("{0}", Request.Form["status"]);
