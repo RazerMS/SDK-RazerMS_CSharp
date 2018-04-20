@@ -11,9 +11,19 @@ Version 1.0.0
 1. Download `MOLPay.dll` library.
 2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
+4. Add `using MolPayCS;` 
+
+### Quick Demo
+Create MOLPayCS object in order to access the properties of Base: 
+
+```CSharp
+MolPayCS.MOLPay object = new MolPayCS.MOLPay();
+```
+Use fucntion `obj.QuickDemo();` to have a quick demo;
+
 
 ### Usage
-Create MOLPayVB object in order to access the properties of Base: 
+Create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
 MolPayCS.MOLPay object = new MolPayCS.MOLPay();
