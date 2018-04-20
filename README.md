@@ -68,7 +68,7 @@ object.Nbcb = String.Format("{0}", Request.Form["nbcb"]);
 if (object.Skey != object.Key1checked())
     object.Status = "-1";
  
-If status = "00" then  
+If status == "00" then  
  /*** NOTE : this is a user-defined function which should be prepared by merchant ***/
 // action to change cart status or to accept order
 // you can also do further checking on the paydate as well
