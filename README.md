@@ -120,7 +120,7 @@ Set the values to requery
  obj.Amount = "100.00";             // 2 decimal points numeric value
  obj.TxID = "xxxxxxxx";             // Replace ​xxxxxxxxx with Merchant transaction ID , which might be duplicated.
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // Desired page to get requery data
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
