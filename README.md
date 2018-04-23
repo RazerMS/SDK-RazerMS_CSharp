@@ -111,7 +111,7 @@ We have 5 type of requery method.
 On first, same we create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
-MolPayCS.MOLPay object = new MolPayCS.MOLPay();
+MolPayCS.MOLPay obj = new MolPayCS.MOLPay();
 ```
 #### 1. Query by unique transaction ID
 Set the values to requery
