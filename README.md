@@ -45,7 +45,7 @@ Use `object.Pay();` to trigger POST data function
 
 -------
 
-### Usage
+### Payment endpoint integration
 Add `using MolPayCS;` 
 
 Create MOLPayCS object in order to access the properties of Base: 
