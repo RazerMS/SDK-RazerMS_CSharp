@@ -1,5 +1,5 @@
 ## Integrating MOLPay with C# SDK
-Version 1.0.0
+Version 1.1.0 (Updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -13,7 +13,7 @@ Version 1.0.0
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
 -------
-### For initiation of payment request
+### Payment endpoint integration
 
 Add `using MolPayCS;` 
 
@@ -24,18 +24,19 @@ MolPayCS.MOLPay object = new MolPayCS.MOLPay();
 ```
 Set the values to Post data for MOLPay's payment request
 ```CSharp
-object.Verifykey = "xxxxxxx";   //Replace ​xxxxxxxxxx with your MOLPay Verify Key
-object._MerchantID = "XXXXXXX";   //Replace ​XXXXXX with your MOLPay Merchant ID
-object._Amount = "100";
-object._Orderid = "66";
+object.Verifykey = "xxxxxxx";           //Replace ​xxxxxxxxxx with your MOLPay Verify Key
+object._Domain = "XXXXXXX";             //Replace ​XXXXXX with your MOLPay Merchant ID
+object._Amount = "100.00";              //2 decimal points numeric value
+object._Orderid = "Testing321";         //alphanumeric, 32 characters
 object.Bill_name = "MOLPay Test";
 object.Bill_email = "example@gmail.com";
 object.Bill_desc = "This is used for initiation of payment request";
-object._Currency = "1";
-object.Country = "MY";
-object.Returnurl = "http://localhost:52815/molpay.aspx"; //localhost url for example
+object._Currency = "MYR";               //2 or 3 chars (ISO-4217) currency code
+object.Country = "MY";                  //2 chars of ISO-3166 country code
+object.Returnurl = "http://exampleurl"; //Desired returned page after payment page
+// All 3 type of url is already combine in this returnurl
 ```
-Set which type of enviroment with either **Sandbox** or **Production**
+Set which type of environment with either **Sandbox** or **Production**
 ```CSharp
 object._Type = "sandbox" // "sandbox" or "production"
 ```
@@ -58,7 +59,7 @@ object.Vkey = "xxxxxxx"   //Replace ​xxxxxxxxxx with your MOLPay Secret_Key
 object.TranID = String.Format("{0}", Request.Form["tranID"]);
 object.Orderid = String.Format("{0}", Request.Form["orderid"]);
 object.Status = String.Format("{0}", Request.Form["status"]);
-object.MerchantID = String.Format("{0}", Request.Form["domain"]);
+object.DomainID = String.Format("{0}", Request.Form["domain"]);
 object.Amount = String.Format("{0}", Request.Form["amount"]);
 object.Currency= String.Format("{0}", Request.Form["currency"]);
 object.Paydate = String.Format("{0}", Request.Form["paydate"]);
@@ -78,14 +79,14 @@ Call the IPN function
 ```CSharp
 object.IPN()
 ```
-### Notification URL wtih IPN(Instant Payment Notification)
+### Notification & Callback URL with IPN(Instant Payment Notification)
 Set additional object for Notification URL 
 ```CSharp
 object.Nbcb = String.Format("{0}", Request.Form["nbcb"]); 
 ```
 
 ### Sample of all 3 endpoints
-`E.G` return & notification & callback URL
+`E.G` return & notification & callback URL (all 3 url are using this structure)
 
 ```CSharp
 //invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
@@ -103,6 +104,132 @@ Else
 // to double check payment status for that particular order.
 }
 ```
+-------
+
+### Requery
+We have 5 type of requery method.
+On first, same we create MOLPayCS object in order to access the properties of Base: 
+
+```CSharp
+MolPayCS.MOLPay object = new MolPayCS.MOLPay();
+```
+#### 1. Query by unique transaction ID
+Set the values to requery
+
+```CSharp
+ obj.Amount = "100.00";             // 2 decimal points numeric value
+ obj.TxID = "xxxxxxxx";             // Replace ​xxxxxxxxx with Merchant transaction ID , which might be duplicated.
+ obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
+ obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
+ obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
+ ```
+ Use RequeryTransactionID() fucntion to trigger 
+ ```CSharp
+ obj.RequeryTransactionID();
+ ```
+Example response with type=0 (default output, plain text with linebreaks)
+```CSharp
+/*
+StatCode=00
+StatName=captured
+TranID=65234
+Amount=3899.00
+Domain=shopA
+Channel=fpx
+VrfKey=xxxxxxxxxxxxxxxxx
+*/
+```
+Example response with type=1 (POST result sent to URL)
+```CSharp
+/*
+$_POST [StatCode] => “00”;
+$_POST [StatName] => “captured”;
+$_POST [TranID] => “65234”;
+$_POST [Amount] => “3899.00”;
+$_POST [Domain] => “shopA”;
+$_POST[Channel] => “fpx”;
+$_POST[VrfKey:]=> “456cf69e5bddfe8ed47371096”;
+*/
+```
+
+#### 2. Query by order ID (single output)
+
+Set the values to requery
+
+```CSharp
+ obj.Amount = "100.00";             // 2 decimal points numeric value
+ obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
+ obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
+ obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
+ obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
+ obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
+ ```
+ Use equeryOrderIDSingle() fucntion to trigger 
+ ```CSharp
+ obj.RequeryOrderIDSingle();
+ ```
+ 
+#### 3. Query by order ID (batch output)
+
+Set the values to requery
+
+```CSharp
+ obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
+ obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
+ obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
+ obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
+ obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
+ obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
+ ```
+ Use RequeryOrderIDBatch() fucntion to trigger 
+ ```CSharp
+ obj.RequeryOrderIDBatch();
+ ```
+ 
+#### 4. Query by multiple order ID (batch output)
+
+Set the values to requery
+
+```CSharp
+ obj.OIDs = "xx|yy|zz";             // ex) xx & yy & zz are the order id you want to check (separate with "|")
+ obj.Delimiter = "|";               /* Single character, default is "|". Avoid using any symbol that might exist in order ID,
+                                      and also any of these: “,%, *, <, >, ? , \, $, &, = */
+ obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
+ obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
+ obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
+ obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
+ obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
+ ```
+ Use RequeryMultiOrderID() fucntion to trigger 
+ ```CSharp
+ obj.RequeryMultiOrderID();
+ ```
+#### 5. Query by multiple transaction ID (batch output)
+
+Set the values to requery
+
+```CSharp
+ obj.TIDs = "xx|yy|zz";             // ex) xx & yy & zz are the transaction id you want to check (separate with "|")
+ obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
+ obj.Verifykey = "zzzzzzzz"         // Replace ​zzzzzzz with your verify key
+ obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
+ obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
+ obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
+ obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
+ ```
+ Use RequeryMultiTransactionID(); fucntion to trigger 
+ ```CSharp
+ obj.RequeryMultiTransactionID();
+ ```
 
 
 Support
