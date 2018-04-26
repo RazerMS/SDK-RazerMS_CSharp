@@ -8,7 +8,7 @@ Version 1.2.0 (updated)
 
 ### Installation
 #### Via File Explorer
-1. Download `MOLPay.dll` library.
+1. Download `MOLPay.dll` library inside MOLPayCS.zip file
 2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
