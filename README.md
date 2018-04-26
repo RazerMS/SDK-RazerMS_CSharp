@@ -125,7 +125,7 @@ Set the values to requery
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
- Use RequeryTransactionID() fucntion to trigger 
+ Use RequeryTransactionID() function to trigger 
  ```CSharp
  obj.RequeryTransactionID();
  ```
@@ -168,7 +168,7 @@ Set the values to requery
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
- Use equeryOrderIDSingle() fucntion to trigger 
+ Use equeryOrderIDSingle() function to trigger 
  ```CSharp
  obj.RequeryOrderIDSingle();
  ```
@@ -187,7 +187,7 @@ Set the values to requery
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
- Use RequeryOrderIDBatch() fucntion to trigger 
+ Use RequeryOrderIDBatch() function to trigger 
  ```CSharp
  obj.RequeryOrderIDBatch();
  ```
@@ -208,7 +208,7 @@ Set the values to requery
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
- Use RequeryMultiOrderID() fucntion to trigger 
+ Use RequeryMultiOrderID() function to trigger 
  ```CSharp
  obj.RequeryMultiOrderID();
  ```
@@ -226,7 +226,7 @@ Set the values to requery
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
- Use RequeryMultiTransactionID(); fucntion to trigger 
+ Use RequeryMultiTransactionID(); function to trigger 
  ```CSharp
  obj.RequeryMultiTransactionID();
  ```
