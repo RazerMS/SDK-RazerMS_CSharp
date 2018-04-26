@@ -1,5 +1,5 @@
 ## Integrating MOLPay with C# SDK
-Version 1.1.0 (Updated)
+Version 1.2.0 (added seamless integration)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -13,7 +13,7 @@ Version 1.1.0 (Updated)
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
 -------
-### Payment endpoint integration
+### Payment Page integration
 
 Add `using MolPayCS;` 
 
@@ -230,7 +230,39 @@ Set the values to requery
  ```CSharp
  obj.RequeryMultiTransactionID();
  ```
+-------
 
+## Seamless Integration
+Add `using MolPayCS;` 
+
+Create MOLPayCS object in order to access the properties of Base: 
+
+```CSharp
+ MolPayCS.Seamlesspayment obj = new MolPayCS.Seamlesspayment();
+```
+
+Set the values for seamless integration
+```CSharp
+ MolPayCS.Seamlesspayment obj = new MolPayCS.Seamlesspayment();
+ obj.Merchantid = "xxx";        //Replace xxx with your merchant id
+ obj.Vkey = "yyy";              //Replace yyy with your verify key
+ obj.ReturnUrl = "zzz";         //Replace zzz with your return url
+ obj.ProcessRequest();          // used to trigger seamless integration
+```
+### For quick demo with UI that we provide
+
+1. Open the visual studio solution inside .zip file
+
+2. Set which type of environment with either **Sandbox** or **Production** in the User_Interface.aspx
+![demotype](https://user-images.githubusercontent.com/26453374/39283372-7b674fc8-4940-11e8-88ff-0b177e8cc42e.PNG)
+
+3. Set the form action to the link you used to set the value for seamless integration on above
+![capture](https://user-images.githubusercontent.com/26453374/39284827-d67ed15e-4947-11e8-9c88-18ba511f3972.PNG)
+
+4. Debug User_Interface.aspx
+
+#### For more information about seamless please refer this link
+[Latest MOLPay Seamless Integration](https://github.com/MOLPay/Seamless_Integration/wiki/Latest-MOLPay-Seamless-Integration-(non-PCI))
 
 Support
 -------
