@@ -251,7 +251,7 @@ Create MOLPayCS object in order to access the properties of Base:
 ```
 ### For quick demo with UI that we provide
 
-1. Open the visual studio solution inside .zip file
+1. Open the visual studio solution inside SeamlessIntergration.zip file
 
 2. Set which type of environment with either **Sandbox** or **Production** in the User_Interface.aspx
 ![demotype](https://user-images.githubusercontent.com/26453374/39283372-7b674fc8-4940-11e8-88ff-0b177e8cc42e.PNG)
