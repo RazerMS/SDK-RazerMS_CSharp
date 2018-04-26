@@ -1,5 +1,5 @@
 ## Integrating MOLPay with C# SDK
-Version 1.2.0 (added seamless integration)
+Version 1.2.0 (updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -281,3 +281,5 @@ Any amendment by your end is at your own risk.
 Changelog
 ----------
 1. 2018-04-18 - v1.0.0 - Initial Release
+2. 2018-04-24 - v1.1.0 - Add 5 requery method
+3. 2018-04-26 - v1.2.0 - Add seamless integration, add a UI file inside zip to test seamless integration
