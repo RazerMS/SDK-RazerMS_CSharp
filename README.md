@@ -1,5 +1,5 @@
 ## Integrating MOLPay with C# SDK
-Version 1.2.0 (updated)
+Version 1.2.1 (updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
