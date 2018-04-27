@@ -244,10 +244,18 @@ Create MOLPayCS object in order to access the properties of Base:
 **Set the values for seamless integration**
 ```CSharp
  MolPayCS.Seamlesspayment obj = new MolPayCS.Seamlesspayment();
- obj.Merchantid = "xxx";        //Replace xxx with your merchant id
- obj.Vkey = "yyy";              //Replace yyy with your verify key
- obj.ReturnUrl = "zzz";         //Replace zzz with your return url
- obj.ProcessRequest();          // used to trigger seamless integration
+ obj.Merchantid = "xxx";        //Replace xxx Merchant login username provided by MOLPay
+ obj.Vkey = "xxx";              //Replace xxx with your verify key
+ obj.Orderid = "xxx";           //Replace xxx with Bill / Invoice no. provided by merchant
+ obj.Country = "MY";            //Buyer country
+ obj.ReturnUrl = "xxx";         //Replace xxx with your return URL
+ obj.CancelUrl = "xxx";         //Replace xxx with URL to redirect when the payment is time out. Mandatory when timer is enable.
+ obj.Failureurl = "xxx";        //Replce xxx with URL to redirect when transcation fail
+ obj.ProcessRequest();          //Used to trigger seamless integration
+
+
+
+
 ```
 ### For quick demo with UI that we provide
 
@@ -261,8 +269,43 @@ Create MOLPayCS object in order to access the properties of Base:
 
 4. Debug User_Interface.aspx
 
-#### For more information about seamless please refer this link
+
+For Seamless integration(Payment Timer Enable)
+---------------------------------------------
+
+1. Add `<input type="hidden" name ="molpaytimer" value="3" />` in form (**Value in minutes. Set 0 to disable this feature**)
+2. Add `<div id="counter"></div>` outside form
+![timer](https://user-images.githubusercontent.com/26453374/39341387-9650e5fe-4a05-11e8-9c7a-60f0dd816104.PNG)
+
+
+#### Example of timer enabled
+![Seamless Demo Picture](http://www.molpay.com/seamless-demo-v3.6/images/seamless-demo-v3.6-withtimer.png)
+
+
+### For more information about seamless please refer this link
 [Latest MOLPay Seamless Integration](https://github.com/MOLPay/Seamless_Integration/wiki/Latest-MOLPay-Seamless-Integration-(non-PCI))
+
+
+
+FAQ
+----------
+**1. Exception of type 'System.IO.FileLoadException' occurred**
+1. Simply right-click the "References" folder and select "Manage NuGet Packages...".
+2. Select the Browse tab.
+3. In the search bar in the upper left type "Newtonsoft.Jason".
+4. Click "Install" and you're done.
+**OR**
+1. remove Newtonsoft.Jason on reference.
+
+
+**2. If payment keep loading wont proceed**
+
+If you are using c# webform **(aspx.cs file)** to set the value of Seamless Intergration, please make sure empty your **aspx** file except   the first line of the file. For example:
+``
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Seamless.aspx.cs" Inherits="MolPayUI.Seamless_function" %>
+``
+
+
 
 Support
 -------
