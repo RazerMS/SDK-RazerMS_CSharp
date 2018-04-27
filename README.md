@@ -295,7 +295,7 @@ FAQ
 3. In the search bar in the upper left type "Newtonsoft.Jason".
 4. Click "Install" and you're done.
 **OR**
-1. remove Newtonsoft.Jason on reference.
+1. Remove Newtonsoft.Jason on reference.
 
 
 **2. If payment keep loading wont proceed**
