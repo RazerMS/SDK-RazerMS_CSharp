@@ -299,6 +299,7 @@ FAQ
 1. Remove Newtonsoft.Jason on reference.
 
 
+
 **2. If payment keep loading wont proceed**
 
 If you are using c# webform **(aspx.cs file)** to set the value of Seamless Intergration, please make sure empty your **aspx** file except   the first line of the file. For example:
