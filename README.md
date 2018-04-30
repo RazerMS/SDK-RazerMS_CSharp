@@ -283,7 +283,7 @@ For Seamless integration(Payment Timer Enable)
 
 
 ### For more information about seamless please refer this link
-[Latest MOLPay Seamless Integration](https://github.com/MOLPay/Seamless_Integration/wiki/Latest-MOLPay-Seamless-Integration-(non-PCI))
+[Latest MOLPay Seamless Integration](https://github.com/MOLPay/Seamless_Integration/wiki/MOLPay-Seamless-Integration-v3.17-(non-PCI))
 
 
 
