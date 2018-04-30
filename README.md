@@ -294,6 +294,7 @@ FAQ
 2. Select the Browse tab.
 3. In the search bar in the upper left type "Newtonsoft.Jason".
 4. Click "Install" and you're done.
+
 **OR**
 1. Remove Newtonsoft.Jason on reference.
 
