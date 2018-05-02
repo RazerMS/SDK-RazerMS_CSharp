@@ -121,7 +121,7 @@ Set the values to requery
  obj.TxID = "xxxxxxxx";             // Replace ​xxxxxxxxx with Merchant transaction ID , which might be duplicated.
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
  obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
- obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
  ```
@@ -163,7 +163,7 @@ Set the values to requery
  obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
  obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
- obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
@@ -181,7 +181,7 @@ Set the values to requery
  obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
  obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
- obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
@@ -202,7 +202,7 @@ Set the values to requery
                                       and also any of these: “,%, *, <, >, ? , \, $, &, = */
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
  obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
- obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
@@ -220,7 +220,7 @@ Set the values to requery
  obj.TIDs = "xx|yy|zz";             // ex) xx & yy & zz are the transaction id you want to check (separate with "|")
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
  obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
- obj.Url = "http://exampleurl";     // Desired page to get requery data
+ obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
