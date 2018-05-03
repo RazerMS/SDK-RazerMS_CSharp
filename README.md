@@ -20,7 +20,7 @@ Add `using MolPayCS;`
 Create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
-MolPayCS.MOLPay object = new MolPayCS.MOLPay();
+MolPayCS.Payment object = new MolPayCS.Payment();
 ```
 Set the values to Post data for MOLPay's payment request
 ```CSharp
@@ -51,7 +51,7 @@ Add `using MolPayCS;`
 Create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
-MolPayCS.MOLPay object = new MolPayCS.MOLPay();
+MolPayCS.Payment object = new MolPayCS.Payment();
 ```
 Set the values received from MOLPay's payment response
 ```CSharp
@@ -59,7 +59,7 @@ object.Vkey = "xxxxxxx"   //Replace ​xxxxxxxxxx with your MOLPay Secret_Key
 object.TranID = String.Format("{0}", Request.Form["tranID"]);
 object.Orderid = String.Format("{0}", Request.Form["orderid"]);
 object.Status = String.Format("{0}", Request.Form["status"]);
-object.DomainID = String.Format("{0}", Request.Form["domain"]);
+object.Domain = String.Format("{0}", Request.Form["domain"]);
 object.Amount = String.Format("{0}", Request.Form["amount"]);
 object.Currency= String.Format("{0}", Request.Form["currency"]);
 object.Paydate = String.Format("{0}", Request.Form["paydate"]);
@@ -111,7 +111,7 @@ We have 5 type of requery method.
 On first, same we create MOLPayCS object in order to access the properties of Base: 
 
 ```CSharp
-MolPayCS.MOLPay obj = new MolPayCS.MOLPay();
+MolPayCS.Payment obj = new MolPayCS.Payment();
 ```
 #### 1. Query by unique transaction ID
 Set the values to requery
