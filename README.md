@@ -25,20 +25,20 @@ MolPayCS.Payment object = new MolPayCS.Payment();
 Set the values to Post data for MOLPay's payment request
 ```CSharp
 object.Verifykey = "xxxxxxx";           //Replace ​xxxxxxxxxx with your MOLPay Verify Key
-object._Domain = "XXXXXXX";             //Replace ​XXXXXX with your MOLPay Merchant ID
-object._Amount = "100.00";              //2 decimal points numeric value
-object._Orderid = "Testing321";         //alphanumeric, 32 characters
+object.Domain = "XXXXXXX";             //Replace ​XXXXXX with your MOLPay Merchant ID
+object.Amount = "100.00";              //2 decimal points numeric value
+object.Orderid = "Testing321";         //alphanumeric, 32 characters
 object.Bill_name = "MOLPay Test";
 object.Bill_email = "example@gmail.com";
 object.Bill_desc = "This is used for initiation of payment request";
-object._Currency = "MYR";               //2 or 3 chars (ISO-4217) currency code
+object.Currency = "MYR";               //2 or 3 chars (ISO-4217) currency code
 object.Country = "MY";                  //2 chars of ISO-3166 country code
 object.Returnurl = "http://exampleurl"; //Desired returned page after payment page
 // All 3 type of url is already combine in this returnurl
 ```
 Set which type of environment with either **Sandbox** or **Production**
 ```CSharp
-object._Type = "sandbox" // "sandbox" or "production"
+object.Type = "sandbox" // "sandbox" or "production"
 ```
 
 Use `object.Pay();` to trigger POST data function
