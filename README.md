@@ -38,7 +38,7 @@ object.Returnurl = "http://exampleurl"; //Desired returned page after payment pa
 ```
 Set which type of environment with either **Sandbox** or **Production**
 ```CSharp
-object.Type = "sandbox" // "sandbox" or "production"
+object.TypeID = "sandbox" // "sandbox" or "production"
 ```
 
 Use `object.Pay();` to trigger POST data function
@@ -68,7 +68,7 @@ object.Skey = String.Format("{0}", Request.Form["skey"]);
 ```
 Set which type of enviroment with either **Sandbox** or **Production**
 ```CSharp
-object.Type = "sandbox" // "sandbox" or "production"
+object.TypeID = "sandbox" // "sandbox" or "production"
 ```
 ### IPN(Instant Payment Notification)
 Additional object must be set when using IPN
