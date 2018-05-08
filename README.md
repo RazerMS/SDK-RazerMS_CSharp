@@ -77,7 +77,7 @@ object.Treq = "1"  //Value is always 1. Do not change
 ```
 Call the IPN function
 ```CSharp
-object.IPN()
+Response.Write(obj.IPN());
 ```
 ### Notification & Callback URL with IPN(Instant Payment Notification)
 Set additional object for Notification URL 
