@@ -1,4 +1,8 @@
+
 ## Integrating MOLPay with C# SDK
+![molpay-developer](https://user-images.githubusercontent.com/26453374/40224906-3319e6f0-5aba-11e8-8051-287b9342473a.jpg)
+
+
 Version 1.2.1 (updated)
 
 ### Pre-Requisite
