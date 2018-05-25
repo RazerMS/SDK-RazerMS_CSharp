@@ -283,7 +283,7 @@ For Seamless integration(Payment Timer Enable)
 
 
 #### Example of timer enabled
-![Seamless Demo Picture](http://www.molpay.com/seamless-demo-v3.6/images/seamless-demo-v3.6-withtimer.png)
+![Seamless Demo Picture](https://molpay.com/seamless-demo/v3.6/images/seamless-demo-v3.6-withtimer.png)
 
 
 ### For more information about seamless please refer this link
