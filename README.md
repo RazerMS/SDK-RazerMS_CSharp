@@ -45,6 +45,14 @@ Set which type of environment with either **Sandbox** or **Production**
 object.TypeID = "sandbox" // "sandbox" or "production"
 ```
 
+If want to set channel for normal integration, add channel values and ask our Technical Support to close the payment options
+```CSharp
+object.Channel = "CIMBCLICKS";  //channel parameter can refer our API SPECIFICATION FOR MOLPAY INTEGRATION.pdf
+```
+
+#### Example
+![captu22re](https://user-images.githubusercontent.com/26453374/41218188-d1ce5710-6d8c-11e8-91dd-f7bef6567751.PNG)
+
 Use `object.Pay();` to trigger POST data function
 
 -------
