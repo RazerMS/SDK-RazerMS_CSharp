@@ -132,7 +132,7 @@ Set the values to requery
  obj.Amount = "100.00";             // 2 decimal points numeric value
  obj.TxID = "xxxxxxxx";             // Replace ​xxxxxxxxx with Merchant transaction ID , which might be duplicated.
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Vkey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.TypeID = "sandbox";            // Set which type of environment with either **sandbox** or **production**
@@ -174,7 +174,7 @@ Set the values to requery
  obj.Amount = "100.00";             // 2 decimal points numeric value
  obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Vkey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Req4token = "1";               // 0 = No (default), 1 = Yes for more card related information
@@ -192,7 +192,7 @@ Set the values to requery
 ```CSharp
  obj.OID = "xxxxxxxx";              // Replace ​xxxxxxxxx with the Order id that you want to check
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Vkey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
@@ -213,7 +213,7 @@ Set the values to requery
  obj.Delimiter = "|";               /* Single character, default is "|". Avoid using any symbol that might exist in order ID,
                                       and also any of these: “,%, *, <, >, ? , \, $, &, = */
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Vkey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
@@ -231,7 +231,7 @@ Set the values to requery
 ```CSharp
  obj.TIDs = "xx|yy|zz";             // ex) xx & yy & zz are the transaction id you want to check (separate with "|")
  obj.Domain = "XXXXXXXX";           // Replace ​XXXXXXX with your MOLPay Merchant ID
- obj.Vkey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
+ obj.Verifykey = "zzzzzzzz";         // Replace ​zzzzzzz with your verify key
  obj.Url = "http://exampleurl";     // The URL to receive POST response from MOLPay
  obj.Type = "0";                    // 0 = plain text result (default),  1 = result via POST method
  obj.Format = "0";                  // 0 = result string with delimiter ( | ), 1 = result in array
