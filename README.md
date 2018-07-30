@@ -16,7 +16,14 @@ Version 1.2.1 (updated)
 2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
+### Contents
+1. [Payment Page Integration](#payment-page-integration)
+2. [Payment Endpoint Integration](#payment-endpoint-integration)
+3. [IPN (Instant Payment Notification)](#ipninstant-payment-notification)
+4. [Requery](#requery)
+5. [Seamless Integration](#seamless-integration)
 -------
+
 ### Payment Page integration
 
 Add `using MolPayCS;` 
