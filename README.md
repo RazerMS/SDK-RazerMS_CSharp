@@ -3,8 +3,6 @@
 ![molpay-developer](https://user-images.githubusercontent.com/26453374/40224906-3319e6f0-5aba-11e8-8051-287b9342473a.jpg)
 
 
-Version 1.2.1 (updated)
-
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
 2. MOLPay Development or Production ID.
@@ -346,3 +344,4 @@ Changelog
 1. 2018-04-18 - v1.0.0 - Initial Release
 2. 2018-04-24 - v1.1.0 - Add 5 requery method
 3. 2018-04-26 - v1.2.0 - Add seamless integration, add a UI file inside seamlessintegration.zip
+4. 2018-07-30 - v1.2.1 - Fix invalid production URL for certain function. `Payment Endpoin Integration`, Rename `Vkey` to `SecretKey`
