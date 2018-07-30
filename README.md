@@ -19,6 +19,10 @@
 - [IPN (Instant Payment Notification)](#ipninstant-payment-notification)
 - [Requery](#requery)
 - [Seamless Integration](#seamless-integration)
+- [FAQ](#faq)
+- [Support](#support)
+- [Disclaimer](#disclaimer)
+- [Changelog](#changelog)
 -------
 
 ### Payment Page integration
