@@ -16,11 +16,11 @@ Version 1.2.1 (updated)
 3. Click `Browse` to search for downloaded library. Click `OK` to add.
 
 ### Contents
-1. [Payment Page Integration](#payment-page-integration)
-2. [Payment Endpoint Integration](#payment-endpoint-integration)
-3. [IPN (Instant Payment Notification)](#ipninstant-payment-notification)
-4. [Requery](#requery)
-5. [Seamless Integration](#seamless-integration)
+- [Payment Page Integration](#payment-page-integration)
+- [Payment Endpoint Integration](#payment-endpoint-integration)
+- [IPN (Instant Payment Notification)](#ipninstant-payment-notification)
+- [Requery](#requery)
+- [Seamless Integration](#seamless-integration)
 -------
 
 ### Payment Page integration
