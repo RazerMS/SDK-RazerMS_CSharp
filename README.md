@@ -1,6 +1,7 @@
 
 ## Integrating MOLPay with C# SDK
-![molpay-developer](https://user-images.githubusercontent.com/26453374/40224906-3319e6f0-5aba-11e8-8051-287b9342473a.jpg)
+<img src="https://user-images.githubusercontent.com/38641542/74420934-32ea7880-4e87-11ea-8675-910eec17f275.jpg">
+
 
 
 ### Pre-Requisite
@@ -299,11 +300,11 @@ For Seamless integration(Payment Timer Enable)
 
 
 #### Example of timer enabled
-![Seamless Demo Picture](https://molpay.com/seamless-demo/v3.6/images/seamless-demo-v3.6-withtimer.png)
+![Seamless Demo Picture](https://merchant.razer.com/seamless-demo/v3.6/images/seamless-demo-v3.6-withtimer.png)
 
 
 ### For more information about seamless please refer this link
-[Latest MOLPay Seamless Integration](https://github.com/MOLPay/Seamless_Integration/wiki/MOLPay-Seamless-Integration-v3.17-(non-PCI))
+[Latest MOLPay Seamless Integration](https://github.com/RazerMS/Seamless_Integration/wiki/MOLPay-Seamless-Integration-v3.17-(non-PCI))
 
 
 
@@ -332,12 +333,12 @@ If you are using c# webform **(aspx.cs file)** to set the value of Seamless Inte
 Support
 -------
 
-Merchant Technical Support / Customer Care : support@molpay.com <br>
-Marketing Campaign : marketing@molpay.com <br>
-Channel/Partner Enquiry : channel@molpay.com <br>
-Media Contact : media@molpay.com <br>
-R&D and Tech-related Suggestion : technical@molpay.com <br>
-Abuse Reporting : abuse@molpay.com
+Merchant Technical Support / Customer Care : support-sa@razer.com <br>
+Marketing Campaign : marketing-sa@razer.com <br>
+Channel/Partner Enquiry : channel-sa@razer.com <br>
+Media Contact : media-sa@razer.com <br>
+R&D and Tech-related Suggestion : technical-sa@razer.com <br>
+Abuse Reporting : abuse-sa@razer.com
 
 Disclaimer
 ----------
