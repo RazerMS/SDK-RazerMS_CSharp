@@ -1,6 +1,6 @@
 
 ## Integrating MOLPay with C# SDK
-<img src="https://user-images.githubusercontent.com/38641542/74420934-32ea7880-4e87-11ea-8675-910eec17f275.jpg">
+<img src="https://user-images.githubusercontent.com/38641542/74423739-b4440a00-4e8b-11ea-8d95-016d25d26e87.jpg">
 
 
 
