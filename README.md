@@ -1,5 +1,5 @@
 
-## Integrating MOLPay with C# SDK
+## Integrating Razer Merchant Services with C# SDK
 <img src="https://user-images.githubusercontent.com/38641542/74423739-b4440a00-4e8b-11ea-8d95-016d25d26e87.jpg">
 
 
@@ -304,7 +304,7 @@ For Seamless integration(Payment Timer Enable)
 
 
 ### For more information about seamless please refer this link
-[Latest MOLPay Seamless Integration](https://github.com/RazerMS/Seamless_Integration/wiki/MOLPay-Seamless-Integration-v3.17-(non-PCI))
+[Latest RazerMS Seamless Integration](https://github.com/RazerMS/Seamless_Integration/wiki/MOLPay-Seamless-Integration-v3.17-(non-PCI))
 
 
 
