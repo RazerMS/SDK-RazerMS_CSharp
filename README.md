@@ -34,7 +34,12 @@ If you are using c# webform **(aspx.cs file)** to set the value of Seamless Inte
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Seamless.aspx.cs" Inherits="MolPayUI.Seamless_function" %>
 ``
 
-
+Changelog
+----------
+1. 2018-04-18 - v1.0.0 - Initial Release
+2. 2018-04-24 - v1.1.0 - Add 5 requery method
+3. 2018-04-26 - v1.2.0 - Add seamless integration, add a UI file inside seamlessintegration.zip
+4. 2018-07-30 - v1.2.1 - Fix invalid production URL for certain function. `Payment Endpoin Integration`, Rename `Vkey` to `SecretKey`
 
 Support
 -------
@@ -50,9 +55,4 @@ Disclaimer
 ----------
 Any amendment by your end is at your own risk.
 
-Changelog
-----------
-1. 2018-04-18 - v1.0.0 - Initial Release
-2. 2018-04-24 - v1.1.0 - Add 5 requery method
-3. 2018-04-26 - v1.2.0 - Add seamless integration, add a UI file inside seamlessintegration.zip
-4. 2018-07-30 - v1.2.1 - Fix invalid production URL for certain function. `Payment Endpoin Integration`, Rename `Vkey` to `SecretKey`
+
