@@ -3,11 +3,15 @@
 <img src="https://user-images.githubusercontent.com/38641542/74423739-b4440a00-4e8b-11ea-8d95-016d25d26e87.jpg">
 
 
+## Introduction 
 
-### Pre-Requisite
+
+
+### Notes/ Prerequisite
 1. Visual Studio 2012 or above.
 2. MOLPay Development or Production ID.
 3. MOLPay General API.
+
 
 ### Installation Guidance
 [Installation](https://github.com/RazerMS/CSharp-SDK/wiki/Installation-Guidance)
@@ -41,7 +45,18 @@ Changelog
 3. 2018-04-26 - v1.2.0 - Add seamless integration, add a UI file inside seamlessintegration.zip
 4. 2018-07-30 - v1.2.1 - Fix invalid production URL for certain function. `Payment Endpoin Integration`, Rename `Vkey` to `SecretKey`
 
-Support
+
+## Contribution
+
+You can contribute to this plugin by sending the pull request to this repository.
+
+
+## Issues
+
+Submit issue to this repository or email to our support-sa@razer.com
+
+
+Contact Support
 -------
 
 Merchant Technical Support / Customer Care : support-sa@razer.com <br>
